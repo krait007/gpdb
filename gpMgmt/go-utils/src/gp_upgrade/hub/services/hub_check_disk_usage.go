@@ -12,12 +12,12 @@ import (
 
 const (
 	// todo generalize to any host
-	address               = "localhost"
-	port                  = "6416"
+	address = "localhost"
+	//port                  = "6416"
 	diskUsageWarningLimit = 80
 )
 
-func (s *CatchAllCliToHubListenerImpl) CheckDiskUsage(ctx context.Context,
+func (s *HubClient) CheckDiskUsage(ctx context.Context,
 	in *pb.CheckDiskUsageRequest) (*pb.CheckDiskUsageReply, error) {
 
 	gplog.Info("starting CheckDiskUsage")
